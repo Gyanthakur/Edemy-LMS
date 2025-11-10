@@ -16,6 +16,7 @@ import "quill/dist/quill.snow.css";
 import { ToastContainer } from 'react-toastify';
 import About from './components/About'
 import ContactForm from './components/ContactForm'
+import PrivacyPolicy from './components/PrivacyPolicy'
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
 
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<ContactForm/>} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
 
 
         <Route path='/educator' element={ <Educator />} >
