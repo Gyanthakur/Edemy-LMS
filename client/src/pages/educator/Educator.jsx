@@ -7,11 +7,11 @@ const Educator = () => {
 	return (
 		<div className="text-default min-h-screen bg-white">
 			<Navbar />
-			<div className="flex">
+			<div className="flex min-h-[calc(100vh-80px)]">
 				<Sidebar />
 				<div className="flex-1">{<Outlet />}</div>
 			</div>
-      <Footer/>
+      		<Footer/>
 		</div>
 	);
 };
