@@ -6,6 +6,7 @@ import { AppContext } from "../../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Logger from "../Logger";
+import {ExternalLink} from "lucide-react"
 
 const Navbar = () => {
 
@@ -53,6 +54,17 @@ const Navbar = () => {
 				<div className="flex items-center gap-5">
 					<Logger/>
 				</div>
+			<div className="flex items-center gap-2">
+				<Link
+					to="https://go-projects-gps.vercel.app/"
+					target="_blank"
+					className="flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium text-indigo-600 shadow-sm transition-colors hover:bg-accent hover:text-indigo-700"
+				>
+					<ExternalLink className="h-4 w-4 text-green-500" />
+					<span>Go Project</span>
+				</Link>
+				</div>
+
 				<div className="flex items-center gap-5">
 					{user && (
 						<>
