@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { use, useContext } from "react";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
@@ -6,7 +6,7 @@ import { AppContext } from "../../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Logger from "../Logger";
-import {ExternalLink} from "lucide-react"
+import {ExternalLink, ExternalLinkIcon} from "lucide-react"
 
 const Navbar = () => {
 
@@ -54,16 +54,18 @@ const Navbar = () => {
 				<div className="flex items-center gap-5">
 					<Logger/>
 				</div>
-			<div className="flex items-center gap-2">
-				<Link
-					to="https://go-projects-gps.vercel.app/"
-					target="_blank"
-					className="flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium text-indigo-600 shadow-sm transition-colors hover:bg-accent hover:text-indigo-700"
-				>
-					<ExternalLink className="h-4 w-4 text-green-500" />
-					<span>Go Project</span>
-				</Link>
+				{!user &&
+				<div className="flex items-center gap-5">
+					<Link
+						to="https://go-projects-gps.vercel.app/"
+						target="_blank"
+						className="flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium text-indigo-600 shadow-sm transition-colors hover:bg-accent hover:text-indigo-700"
+					>
+						<ExternalLink className="h-4 w-4 text-green-500" />
+						<span>Go Project</span>
+					</Link>
 				</div>
+}
 
 				<div className="flex items-center gap-5">
 					{user && (
@@ -75,7 +77,12 @@ const Navbar = () => {
 				</div>
 
 				{user ? (
-					<UserButton />
+					// <UserButton />
+					<UserButton>
+						<UserButton.MenuItems>
+                                <UserButton.Action label='Go Projects' labelIcon={<ExternalLinkIcon size={16} className='text-green-500' />}  onClick={() => window.open("https://go-projects-gps.vercel.app", "_blank")} />
+                            </UserButton.MenuItems>
+					</UserButton>
 				) : (
 					<button
 						onClick={() => openSignIn()}
@@ -97,10 +104,29 @@ const Navbar = () => {
 					)}
 				</div>
         {
-          user ? <UserButton/> :
+          user ? 
+		  		<UserButton>
+					<UserButton.MenuItems>
+                        <UserButton.Action label='Go Projects' labelIcon={<ExternalLinkIcon size={16} className='text-green-500' />}  onClick={() => window.open("https://go-projects-gps.vercel.app", "_blank")} />
+                    </UserButton.MenuItems>
+				</UserButton> :
+		  	
+
+				<div className="flex items-center gap-2">
+				<Link
+					to="https://go-projects-gps.vercel.app/"
+					target="_blank"
+					className="flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium text-indigo-600 shadow-sm transition-colors hover:bg-accent hover:text-indigo-700"
+				>
+					<ExternalLink className="h-4 w-4 text-green-500" />
+					<span>Go Project</span>
+				</Link>
 				<button onClick={()=>openSignIn()}>
 					<img src={assets.user_icon} alt="" />
 				</button>
+				</div>
+
+			
         }
 			</div>
 		</div>
