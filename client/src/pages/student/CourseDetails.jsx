@@ -8,6 +8,7 @@ import Footer from "../../components/student/Footer";
 import YouTube from "react-youtube";
 import { toast } from "react-toastify";
 import axios from "axios";
+import Signature from "../../components/Signature";
 
 const CourseDetails = () => {
 	const { id } = useParams();
@@ -348,6 +349,7 @@ const CourseDetails = () => {
 					</div>
 				</div>
 			</div>
+			<Signature/>
 
 			<Footer />
 		</>

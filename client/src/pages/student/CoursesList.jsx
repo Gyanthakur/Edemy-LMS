@@ -5,6 +5,7 @@ import { data, useParams } from "react-router-dom";
 import CourseCard from "../../components/student/CourseCard";
 import { assets } from "../../assets/assets";
 import Footer from "../../components/student/Footer";
+import Signature from "../../components/Signature";
 
 const CoursesList = () => {
 	const { navigate, allCourses } = useContext(AppContext);
@@ -58,6 +59,7 @@ const CoursesList = () => {
 					))}
 				</div>
 			</div>
+			<Signature/>
       <Footer/>
 		</>
 	);

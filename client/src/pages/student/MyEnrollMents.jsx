@@ -5,6 +5,7 @@ import Footer from "../../components/student/Footer";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { data } from "react-router-dom";
+import Signature from "../../components/Signature";
 
 
 
@@ -128,6 +129,7 @@ const MyEnrollMents = () => {
 					</tbody>
 				</table>
 			</div>
+			<Signature/>
 			<Footer />
 		</>
 	);

@@ -228,6 +228,7 @@ import Rating from "../../components/student/Rating";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Loading from "../../components/student/Loading";
+import Signature from "../../components/Signature";
 
 const Player = () => {
 	const {
@@ -569,6 +570,7 @@ const Player = () => {
 					)}
 				</div>
 			</div>
+			<Signature/>
 			<Footer />
 		</>
 	) : (
