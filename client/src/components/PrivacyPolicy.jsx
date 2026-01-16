@@ -1,12 +1,15 @@
 
 import { assets } from '../assets/assets';
+import Signature from './Signature';
+import Footer from './student/Footer';
 
 export default function PrivacyPolicy() {
   return (
+    <>
     <main className="min-h-screen bg-gradient-to-b from-cyan-100/70 to-white flex items-start py-16 px-6 md:px-12">
       <section className="w-full max-w-4xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-12 border border-gray-100">
         <header className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
-          <img src={assets.logo || assets.sketch} alt="Edemy logo" className="w-12 h-12 md:w-14 md:h-14 rounded-md" />
+          <img src={assets.logo || assets.sketch} alt="Edemy logo" className="w-12 h-12 md:w-20 md:h-20 rounded-md" />
 
           <div className="flex-1">
             <h1 className="md:text-home-heading-large text-home-heading-small font-extrabold text-gray-800 leading-tight">Privacy Policy</h1>
@@ -78,14 +81,17 @@ export default function PrivacyPolicy() {
           <hr className="border-t border-gray-100" />
 
           <div className="flex items-start gap-4">
-            <img src={assets.sketch} alt="decoration" className="w-20 h-20 hidden md:block opacity-90" />
+            {/* <img src={assets.sketch} alt="decoration" className="w-20 h-20 hidden md:block opacity-90" /> */}
             <div className="text-sm text-gray-600">
               <p className="mb-2">For privacy requests or questions, email us at <a href="mailto:gps.96169@gmail.com" className="text-blue-600 font-medium">gps.96169@gmail.com</a>.</p>
               <p>If you need this policy in another format, contact support and we’ll help.</p>
             </div>
           </div>
+            <Signature/>
         </div>
       </section>
     </main>
+        <Footer/>
+    </>
   );
 }

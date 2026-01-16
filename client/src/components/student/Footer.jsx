@@ -20,8 +20,17 @@ const Footer = () => {
 		<footer className="bg-gray-900 md:px-36 text-left w-full mt-10">
 			<div className="flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30">
 				<div className="flex flex-col md:items-start items-center w-full">
-					<img src={assets.logo_dark} alt="logo" />
-					<p className="mt-6 text-center sm:flex sm:flex-row sm:justify-center  md:text-left text-sm text-white/80">
+					{/* <img src={assets.logo_dark} alt="logo" />
+					<p className="mt- text-center sm:flex sm:flex-row sm:justify-center  md:text-left text-sm text-white/80">
+						Edemy LMS makes education accessible and engaging, connecting
+						students with educators through quality courses, interactive tools,
+						and intuitive design.
+					</p> */}
+
+
+					<img className="w-auto h-28 transition-all duration-300 hover:opacity-100 hover:scale-105" src='/edemylms.png' alt="logo" />
+					
+					<p className="mt- text-center sm:flex sm:flex-row sm:justify-center  md:text-left text-sm text-white/80">
 						Edemy LMS makes education accessible and engaging, connecting
 						students with educators through quality courses, interactive tools,
 						and intuitive design.
@@ -37,11 +46,21 @@ const Footer = () => {
 							<Link to="/about">About us</Link>
 						</li>
 						<li>
+							<Link to="/course-list">Course list</Link>
+						</li>
+						<li>
+							<Link to="/my-enrollments">My-enrollments</Link>
+						</li>
+						<li>
 							<Link to="/contact">Contact us</Link>
 						</li>
 						<li>
 							<Link to="/privacy-policy">Privacy policy</Link>
 						</li>
+						
+
+						
+
 					</ul>
 				</div>
 				<div className="md:flex flex-col items-start w-full">
