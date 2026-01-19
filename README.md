@@ -9,6 +9,11 @@
 
 
 Edemy LMS is a full-stack learning management system (LMS) that provides educators and students with a seamless e-learning experience. Built using modern web technologies, it includes user authentication, course management, video streaming, and progress tracking.
+<img width="1536" height="1024" alt="edemylms" src="https://github.com/user-attachments/assets/dab1ef86-1699-488f-addb-c7315b1116ed" />
+
+![Edemy LMS](https://github.com/user-attachments/assets/8926c6a8-0e32-442a-82f5-dd19b11b6d7c)
+
+
 
 ## 🚀 Tech Stack
 
@@ -226,3 +231,6 @@ Made with ❤️ by Gyan Pratap Singh
 ### ⭐ Show Some Love!
 
 If you like this project, don't forget to leave a **⭐ Star** on GitHub! 🚀
+
+
+<img width="1536" height="1024" alt="gps" src="https://github.com/user-attachments/assets/fde20654-9d28-44b1-93e7-167e112752a0" />
